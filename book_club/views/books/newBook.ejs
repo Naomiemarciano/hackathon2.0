@@ -1,0 +1,73 @@
+<!-- In your newBook.ejs file -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add a New Book - Once Upon a Time</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2 style="
+    color: rgb(9, 27, 132);
+    text-align: center;
+    ">Add a New Book</h2>
+    <form action="/books" method="POST">
+      <label for="title">Title:</label>
+      <input type="text" name="title" id="title" required><br>
+
+      <label for="author">Author:</label>
+      <input type="text" name="author" id="author" required><br>
+
+      <label for="summary">Summary:</label>
+      <textarea name="summary" id="summary"></textarea><br>
+
+      <!-- Category selection as radio buttons styled as big buttons -->
+      <div class="category-select">
+        <p>Select Genre:</p>
+        <div class="category-buttons">
+          <label class="category-btn">
+            <input type="radio" name="genre" value="fantasy" required> Fantasy
+          </label>
+          <label class="category-btn">
+            <input type="radio" name="genre" value="romance" required> Romance
+          </label>
+          <label class="category-btn">
+            <input type="radio" name="genre" value="crime" required> Crime
+          </label>
+          <label class="category-btn">
+            <input type="radio" name="genre" value="scifi" required> Science Fiction
+          </label>
+          <label class="category-btn">
+            <input type="radio" name="genre" value="horror" required> Horror
+          </label>
+          <label class="category-btn">
+            <input type="radio" name="genre" value="thriller" required> Thriller
+          </label>
+          <label class="category-btn">
+            <input type="radio" name="genre" value="historical" required> Historical Fiction
+          </label>
+          <label class="category-btn">
+            <input type="radio" name="genre" value="adventure" required> Adventure
+          </label>
+          <label class="category-btn">
+            <input type="radio" name="genre" value="biography" required> Biography
+          </label>
+          <label class="category-btn">
+            <input type="radio" name="genre" value="selfhelp" required> Self-Help
+          </label>
+        </div>
+      </div>
+      
+      <!-- Additional fields if needed (e.g., cover image, content, etc.) -->
+      <label for="coverImage">Cover Image URL:</label>
+      <input type="file" name="coverImage" id="coverImage" accept="image/*">
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
+
+
+

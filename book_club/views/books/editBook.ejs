@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Book Summary - Once Upon a Time</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Once Upon a Time</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/books">Books</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Edit Summary for "<%= book.title %>"</h2>
+    <form action="/books/<%= book._id %>/edit" method="POST">
+      <label for="summary">Summary:</label><br>
+      <textarea name="summary" id="summary" rows="5" cols="40" required><%= book.summary %></textarea><br>
+      <button type="submit">Save Changes</button>
+    </form>
+    <p><a href="/books/<%= book._id %>">Back to Book Details</a></p>
+  </main>
+  <footer>
+    <p>&copy; 2025 Once Upon a Time. All rights reserved.</p>
+  </footer>
+</body>
+</html>

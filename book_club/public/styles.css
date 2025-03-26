@@ -1,0 +1,493 @@
+/* Basic reset and styling */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Header styling */
+header {
+  background-color:  #d3cbb6;
+  padding: 20px 0;
+  border-bottom: 1px solid #d3cbb6;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 3.5rem;
+  color: rgb(9, 27, 132);
+  margin: 0;
+}
+header p.tagline {
+  font-family: 'Lavishly Yours', cursive;
+  font-size: 1.2rem;
+  color: #885606;
+  margin: 7px 0 15px;
+}
+
+/* Navigation styling */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #885606;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: rgb(9, 27, 132);
+}
+
+/* Main content styling */
+main {
+  max-width: 650px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #d3cbb6;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: rgb(5, 17, 87);
+  border-top: 1px solid #ddd;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+body {
+  background-image: url('/background.jpg');
+  background-size: cover;         /* Scale the image to cover the entire page */
+  background-repeat: no-repeat;   /* Do not repeat the image */
+  background-position: center;    /* Center the image */
+}
+
+/* Ensure the main area takes full viewport height for centering */
+main {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style the hero container */
+.hero {
+  text-align: center;
+}
+
+.hero h2 {
+  font-family: 'Lavishly Yours', cursive; /* Or any font you prefer */
+  color: #885606;                     /* Change to your desired color (example: purple) */
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.hero p {
+  font-family: 'Parisienne', cursive;; /* Or any font you prefer */
+  color: #885606;                     /* Change to your desired color (example: a lighter purple) */
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #021c53;
+  border-top: 1px solid #d3cbb6;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: #d3cbb6; /* Change this to your desired color, e.g., blue (#0000FF) or any other */
+}
+
+/* login style: */
+
+
+
+/* Basic Reset and Body Styling */
+body {
+  margin: 0;
+  padding: 0;
+  background-color:#d3cbb6;
+  font-family: Arial, sans-serif;
+}
+
+/* Container for the Login Form */
+.login-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: #d3cbb6;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Header Style */
+.login-container h2 {
+  margin-bottom: 20px;
+  font-family: 'Parisienne', cursive;
+  font-size: 2.5rem;
+  color:  #885606;
+}
+
+/* Form and Input Styles */
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.login-container label {
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #885606;
+}
+
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #d3cbb6;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Button Style */
+.login-container button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #885606; /* brownish color */
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #aa6e0a;
+}
+
+/* Paragraph Style */
+.login-container p {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.login-container p a {
+  color: #885606;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-container p a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+/* 
+
+
+
+*/
+
+
+.books-nav .nav-btn {
+  background-color: #aa6e0a;    /* brownish color */
+  color: #fff;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.books-nav .nav-btn:hover {
+  background-color: #aa6e0a;
+}
+
+.nav-search {
+  display: flex;
+  align-items: center;
+}
+
+.nav-search input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  font-size: 1rem;
+}
+
+.nav-search button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #885606;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-search button:hover {
+  background-color: #aa6e0a;
+}
+
+/* background of add a new book */
+.form-container {
+  background-color: #d3cbb6;
+  padding: 100px;
+  margin: 40px auto;
+  max-width: 600px;
+  border: 17px solid #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 64px;
+}
+
+
+
+
+/* 
+
+
+
+*/
+
+.element.style {
+  color: #885606;
+  text-align: center;
+}
+
+
+
+/* Main Navigation (Home/Logout) */
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav ul li {
+  margin: 0 22px;
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #885606;
+  font-weight: bold;
+}
+
+/* Books Navigation */
+.books-nav {
+  background-color: #d3cbb6;
+  border-top: 1px solid #d3cbb6;
+  border-bottom: 1px solid #d3cbb6;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  max-width: 800px;             /* adjust to your layout */
+  margin: 20px auto;            /* center on the page */
+}
+
+.books-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.books-nav ul li {
+  margin: 0 15px;
+}
+
+.nav-btn {
+  text-decoration: none;
+  background-color: #885606;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #aa6e0a;
+}
+
+.nav-search {
+  display: flex;
+  align-items: center;
+}
+
+.nav-search input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  font-size: 1rem;
+}
+
+.nav-search button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #aa6e0a;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-search button:hover {
+  background-color: #aa6e0a;
+}
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Basic header styling */
+
+
+
+nav ul {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: inline-block;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+
+
+nav ul li a:hover {
+  color: #885606;
+}
+
+/* Container for book details, white background */
+.book-details-container {
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Star rating buttons */
+.book-details-container form button {
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.book-details-container form button:hover {
+  color: #aa6e0a; /* Hover color for stars */
+}
+
+/* Footer */
+
+
+
+/* Container for authentication forms */
+.auth-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  background-color: #d3cbb6;  /* White background for clarity */
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Heading styling */
+.auth-container h2 {
+  margin-bottom: 20px;
+  font-family: 'Parisienne', cursive;
+  font-size: 2.5rem;
+  color:rgb(9, 27, 132);
+}
+
+/* Form styling */
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.auth-container label {
+  text-align: left;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #885606;
+}
+
+.auth-container input[type="text"],
+.auth-container input[type="email"],
+.auth-container input[type="password"] {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Button styling */
+.auth-container button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #885606;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-container button:hover {
+  background-color: #aa6e0a;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+  margin-bottom: 15px;
+}

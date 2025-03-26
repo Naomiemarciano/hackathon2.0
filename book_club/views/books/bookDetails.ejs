@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= book.title %> - Once Upon a Time</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Once Upon a Time</h1>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <% if (!session || !session.userId) { %>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Sign Up</a></li>
+        <% } else { %>
+          <li><a href="/logout">Logout</a></li>
+        <% } %>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- White background container for readability -->
+    <div class="book-details-container">
+      <h2><%= book.title %></h2>
+      <p><strong>Author:</strong> <%= book.author %></p>
+      <p><strong>Summary:</strong> <%= book.summary %></p>
+      
+      <!-- Optional: If you have a rating system in your schema (book.rating, book.ratingCount) -->
+      <% 
+        // Calculate percentage based on average rating (book.rating out of 5)
+        const avgRating = book.rating || 0;
+        const ratingPercentage = avgRating ? (avgRating / 5) * 100 : 0;
+      %>
+      <p><strong>Added by:</strong> <%= book.createdBy?.username || 'Unknown' %></p>
+      
+      <hr>
+      <!-- Rating Section -->
+      <h3>Rate this Book</h3>
+      <!-- Display average rating out of 5 and percentage -->
+      <p>
+        Average Rating: <%= avgRating.toFixed(1) %> / 5 
+        (<%= ratingPercentage.toFixed(1) %>%)
+      </p>
+      <form action="/books/<%= book._id %>/rate" method="POST">
+        <button type="submit" name="rating" value="1">★</button>
+        <button type="submit" name="rating" value="2">★★</button>
+        <button type="submit" name="rating" value="3">★★★</button>
+        <button type="submit" name="rating" value="4">★★★★</button>
+        <button type="submit" name="rating" value="5">★★★★★</button>
+      </form>
+
+      <hr>
+      <h3>Comments</h3>
+      <ul>
+        <% book.comments.forEach(comment => { %>
+          <li>
+            <strong><%= comment.author?.username || 'Anonymous' %></strong> : <%= comment.text %>
+          </li>
+        <% }) %>
+      </ul>
+
+      <% if (session && session.userId) { %>
+        <form action="/books/<%= book._id %>/comments" method="POST">
+          <label for="commentText">Add a comment:</label><br>
+          <textarea name="commentText" id="commentText"></textarea><br>
+          <button type="submit">Submit</button>
+        </form>
+      <% } else { %>
+        <p><a href="/login">Log in</a> to leave a comment.</p>
+      <% } %>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Once Upon a Time. All rights reserved.</p>
+  </footer>
+</body>
+</html>

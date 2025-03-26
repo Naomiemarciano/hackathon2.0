@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Books - Once Upon a Time</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Once Upon a Time</h1>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/logout">Logout</a></li>
+      </ul>
+    </nav>
+    <nav class="books-nav">
+      <ul>
+        <li><a href="/books" class="nav-btn">List of Books</a></li>
+        <li>
+          <form action="/books" method="GET" class="nav-search">
+            <input type="text" name="search" placeholder="Search by title or author" value="<%= typeof searchQuery !== 'undefined' ? searchQuery : '' %>">
+            <button type="submit">Search</button>
+          </form>
+        </li>
+        <li><a href="/books/new" class="nav-btn">Add a New Book</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <h2>List of Books</h2>
+    <ul>
+      <% books.forEach(function(book) { %>
+        <li>
+          <a href="/books/<%= book._id %>">
+            <%= book.title %> - <%= book.author %>
+          </a>
+        </li>
+      <% }); %>
+    </ul>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 Once Upon a Time. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
